@@ -24,7 +24,7 @@ module ApplicationHelper
         @nav_in_menu = true
         @nav_link_active = active
         content += capture(&block)
-        class_name = "dropdown dropdown-hover #{@nav_link_active ? 'active' : ''}"
+        class_name = "nav-item dropdown dropdown-hover #{@nav_link_active ? 'active' : ''}"
       ensure
         @nav_in_menu = @nav_link_active = false
       end
@@ -34,7 +34,7 @@ module ApplicationHelper
       # An "active" menu item may be an eyesore, hence `!@nav_in_menu &&`.
       class_name = !@nav_in_menu && active ? 'active' : ''
     end
-    content_tag :li, content, class: class_name
+    content_tag :li, content, class: class_name + ' nav-item'
   end
 
   def yes_no(bool)
