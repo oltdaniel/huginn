@@ -14,18 +14,18 @@
         <td>
           <div class="btn-group btn-group-xs">
             <% if log.inbound_event.present? %>
-              <%= link_to 'Event In', event_path(log.inbound_event), class: "btn btn-default" %>
+              <%= link_to 'Event In', event_path(log.inbound_event), class: "btn btn-primary" %>
             <% else %>
-              <%= link_to 'Event In', '#', class: "btn btn-default disabled" %>
+              <%= link_to 'Event In', '#', class: "btn btn-primary disabled" %>
             <% end %>
 
             <% if log.outbound_event.present? %>
-              <%= link_to 'Event Out', event_path(log.outbound_event), class: "btn btn-default" %>
+              <%= link_to 'Event Out', event_path(log.outbound_event), class: "btn btn-primary" %>
             <% else %>
-              <%= link_to 'Event Out', '#', class: "btn btn-default disabled" %>
+              <%= link_to 'Event Out', '#', class: "btn btn-primary disabled" %>
             <% end %>
 
-            <%= link_to 'Details', '#', :class => "btn btn-default show-log-details", :data => { :'modal-title' => log.level >= 4 ? 'Error' : 'Info', :'modal-content' => log.message } %>
+            <%= link_to 'Details', '#', :class => "btn btn-primary show-log-details", :data => { :'modal-title' => log.level >= 4 ? 'Error' : 'Info', :'modal-content' => log.message } %>
           </div>
         </td>
       </tr>

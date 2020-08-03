@@ -65,7 +65,7 @@
               <% if (!job.locked_at && !job.locked_by) || job.failed_at.present? %>
                 <div class="btn-group btn-group-xs" style="float: right">
                   <% if (job.run_at > Time.now) || job.failed_at.present? %>
-                    <%= link_to 'Run now', run_job_path(job), class: "btn btn-default", method: :put %>
+                    <%= link_to 'Run now', run_job_path(job), class: "btn btn-primary", method: :put %>
                   <% end %>
                   <%= link_to 'Delete', job_path(job), class: "btn btn-danger", method: :delete, data: { confirm: 'Really delete this job?' } %>
                 </div>
@@ -76,20 +76,20 @@
         </table>
       </div>
 
-      <%= paginate @jobs, :theme => 'twitter-bootstrap-3' %>
+      <%= paginate @jobs %>
 
       <br />
       <div class="btn-group">
-        <%= link_to destroy_failed_jobs_path, class: "btn btn-default", method: :delete do %>
-          <span class="glyphicon glyphicon-trash"></span> Remove failed jobs
+        <%= link_to destroy_failed_jobs_path, class: "btn btn-primary", method: :delete do %>
+          <span class="fa fa-trash"></span> Remove failed jobs
         <% end %>
 
-        <%= link_to retry_queued_jobs_path, class: "btn btn-default", method: :post do %>
-          <span class="glyphicon glyphicon-refresh"></span> Retry queued jobs
+        <%= link_to retry_queued_jobs_path, class: "btn btn-primary", method: :post do %>
+          <span class="fa fa-refresh"></span> Retry queued jobs
         <% end %>
 
-        <%= link_to destroy_all_jobs_path, class: "btn btn-default", method: :delete, data: { confirm: "Are you sure you want to delete ALL pending jobs for all Huginn users?" } do %>
-          <span class="glyphicon glyphicon-remove"></span> Remove all jobs
+        <%= link_to destroy_all_jobs_path, class: "btn btn-primary", method: :delete, data: { confirm: "Are you sure you want to delete ALL pending jobs for all Huginn users?" } do %>
+          <span class="fa fa-remove"></span> Remove all jobs
         <% end %>
       </div>
     </div>

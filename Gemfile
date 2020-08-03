@@ -89,7 +89,7 @@ unless Gem::Version.new(Bundler::VERSION) >= Gem::Version.new('1.5.0')
 end
 
 gem 'ace-rails-ap', '~> 2.0.1'
-gem 'bootstrap-kaminari-views', '~> 0.0.3'
+# gem 'bootstrap-kaminari-views', '~> 0.0.3'
 gem 'bundler', '>= 1.5.0'
 gem 'coffee-rails', '~> 5'
 gem 'daemons', '~> 1.1.9'
@@ -110,7 +110,7 @@ gem 'jquery-rails', '~> 4.2.1'
 gem 'huginn_agent', '~> 0.4.0'
 gem 'json', '~> 2.3'
 gem 'jsonpath', '~> 1.0.1'
-gem 'kaminari', '~> 1.1.1'
+gem 'kaminari', '~> 1.2'
 gem 'kramdown', '~> 1.3.3'
 gem 'liquid', '~> 4.0.3'
 gem 'loofah', '~> 2.0'

@@ -9,7 +9,7 @@ module ScenarioHelper
 
   def scenario_label(scenario, text = nil)
     text ||= scenario.name
-    content_tag :span, text, class: 'label scenario', style: style_colors(scenario)
+    content_tag :span, text, class: 'badge badge-pill scenario', style: style_colors(scenario)
   end
 
   def default_scenario_bg_color

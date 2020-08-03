@@ -35,11 +35,11 @@
             <td>
               <div class="btn-group btn-group-xs">
                 <% if service.global %>
-                  <%= link_to 'Make private', toggle_availability_service_path(service), method: :post, data: { confirm: 'Are you sure you want to remove access to your data on this service for other users?'}, class: "btn btn-default" %>
+                  <%= link_to 'Make private', toggle_availability_service_path(service), method: :post, data: { confirm: 'Are you sure you want to remove access to your data on this service for other users?'}, class: "btn btn-primary" %>
                 <% else %>
-                   <%= link_to 'Make global', toggle_availability_service_path(service), method: :post, data: { confirm: 'Are you sure you want to grant every user on this system access to your data on this service?'}, class: "btn btn-default" %>
+                   <%= link_to 'Make global', toggle_availability_service_path(service), method: :post, data: { confirm: 'Are you sure you want to grant every user on this system access to your data on this service?'}, class: "btn btn-primary" %>
                 <% end %>
-                <%= link_to 'Delete', service_path(service), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger" %>
+                <%= link_to 'Delete', service_path(service), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-danger" %>
               </div>
             </td>
           </tr>
@@ -47,7 +47,7 @@
         </table>
       </div>
 
-      <%= paginate @services, :theme => 'twitter-bootstrap-3' %>
+      <%= paginate @services %>
     </div>
   </div>
 </div>

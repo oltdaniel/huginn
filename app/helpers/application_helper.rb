@@ -72,7 +72,7 @@ module ApplicationHelper
     link_to [
       omniauth_provider_icon(provider),
       content_tag(:span, "Authenticate with #{omniauth_provider_name(provider)}")
-    ].join.html_safe, user_omniauth_authorize_path(provider), class: "btn btn-default btn-service service-#{provider}"
+    ].join.html_safe, user_omniauth_authorize_path(provider), class: "btn btn-primary btn-service service-#{provider}"
   end
 
   def service_label_text(service)
